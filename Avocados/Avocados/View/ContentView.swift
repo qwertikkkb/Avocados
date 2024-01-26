@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    var headers: [Header] = headersData
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20) {
@@ -16,22 +18,31 @@ struct ContentView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            HeaderView()
+                            ForEach(headers) { item in
+                                HeaderView(header: item)
+                            }
+                           
                         }
                    }
             
+             //Mark - Dishes
+                    Text("Avocado Dishes")
+                        .fontWeight(.bold)
+                        .modifier(TitleModifier())
+                    DishesView()
+                        .frame(maxWidth: 640)
+                    
                     
                      //Mark - Footer
                     
                     Text("All about avocados")
-                        .font(.system(.title, design: .serif))
                         .fontWeight(.bold)
-                        .foregroundStyle(Color("ColorGreenAdaptive"))
-                    .padding(8)
+                        .modifier(TitleModifier())
                     Text("Everything you want to know about avocados but were too afrait to ask")
                         .font(.system(.body, design: .serif))
                         .multilineTextAlignment(.center)
                         .foregroundStyle(.gray)
+                        .frame(minHeight: 60)
                     
                 }
                 .frame(maxWidth: 640)
@@ -44,6 +55,15 @@ struct ContentView: View {
     }
 }
 
+struct TitleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(.title, design: .serif))
+            .foregroundStyle(Color("ColorGreenAdaptive"))
+            .padding(8)
+    }
+}
+
 #Preview {
-    ContentView()
+    ContentView(headers: headersData)
 }
