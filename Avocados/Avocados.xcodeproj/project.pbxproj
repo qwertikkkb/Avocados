@@ -29,6 +29,7 @@
 		17F7E4C92B64606900146A02 /* RecipeRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F7E4C82B64606900146A02 /* RecipeRatingView.swift */; };
 		17F7E4CB2B64612C00146A02 /* RecipeCookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F7E4CA2B64612C00146A02 /* RecipeCookingView.swift */; };
 		17F7E4CD2B6462AB00146A02 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F7E4CC2B6462AB00146A02 /* RecipeDetailView.swift */; };
+		17F7E4CF2B65411200146A02 /* RipeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F7E4CE2B65411200146A02 /* RipeningView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		17F7E4C82B64606900146A02 /* RecipeRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRatingView.swift; sourceTree = "<group>"; };
 		17F7E4CA2B64612C00146A02 /* RecipeCookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCookingView.swift; sourceTree = "<group>"; };
 		17F7E4CC2B6462AB00146A02 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		17F7E4CE2B65411200146A02 /* RipeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				17F7E4C82B64606900146A02 /* RecipeRatingView.swift */,
 				17F7E4CA2B64612C00146A02 /* RecipeCookingView.swift */,
 				17F7E4CC2B6462AB00146A02 /* RecipeDetailView.swift */,
+				17F7E4CE2B65411200146A02 /* RipeningView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				17F7E4B92B64415200146A02 /* HeaderData.swift in Sources */,
 				17F7E4BB2B6446AE00146A02 /* DishesView.swift in Sources */,
 				17F7E4CB2B64612C00146A02 /* RecipeCookingView.swift in Sources */,
+				17F7E4CF2B65411200146A02 /* RipeningView.swift in Sources */,
 				17F7E4BF2B64508000146A02 /* FactModel.swift in Sources */,
 				17F7E4BD2B644D5B00146A02 /* FactsView.swift in Sources */,
 				17F7E4C72B6454D700146A02 /* RecipeCardView.swift in Sources */,
