@@ -9,11 +9,13 @@ import SwiftUI
 
 struct RipeningView: View {
     
+    var ripening: Ripening
+    
     @State private var slidingAnimation = false
     
     var body: some View {
         VStack {
-            Image("avocado-ripening-1")
+            Image(ripening.image)
                 .resizable()
                 .frame(width: 100, height: 100, alignment: .center)
                 .clipShape(Circle())
@@ -35,7 +37,7 @@ struct RipeningView: View {
             VStack(alignment: .center, spacing: 10) {
                 //Stage
                 VStack(alignment: .center, spacing: 0) {
-                    Text("1")
+                    Text(ripening.stage)
                         .font(.system(.largeTitle, design: .serif))
                         .fontWeight(.bold)
                     
@@ -48,7 +50,7 @@ struct RipeningView: View {
                 .frame(width: 180)
                 
                 //Title
-                Text("Hard")
+                Text(ripening.title)
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
                     .foregroundStyle(Color("ColorGreenMedium"))
@@ -63,7 +65,7 @@ struct RipeningView: View {
                     )
                 //Description
                 Spacer()
-                Text("Fresh off the tree, the avocado is very hard with no give.")
+                Text(ripening.description)
                     .foregroundStyle(Color("ColorGreenDark"))
                     .fontWeight(.bold)
                     .lineLimit(nil)
@@ -71,7 +73,7 @@ struct RipeningView: View {
                 
                 
                 //Ripeness
-                Text("5+ Days")
+                Text(ripening.ripeness.uppercased())
                     .foregroundStyle(.white)
                     .font(.system(.callout, design: .serif))
                     .fontWeight(.bold)
@@ -86,7 +88,7 @@ struct RipeningView: View {
                     )
                 
                 //Instruction
-                Text("Hold avocados at room temperature until they are fully rupe")
+                Text(ripening.instruction)
                     .font(.footnote)
                     .foregroundStyle(Color("ColorGreenLight"))
                     .fontWeight(.bold)
@@ -112,5 +114,5 @@ struct RipeningView: View {
 }
 
 #Preview {
-    RipeningView()
+    RipeningView(ripening: ripeningData[1])
 }
